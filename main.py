@@ -13,7 +13,7 @@ def write_parsed_file(parse_string, parsed_doc):
         if parse_string in ps:
             parsed_list.append(ps)
 
-    dated_file = "/parsed_files/" + datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".txt"
+    dated_file = datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + ".txt"
     new_file = open(dated_file, 'w')
     new_file.writelines(parsed_list)
 
